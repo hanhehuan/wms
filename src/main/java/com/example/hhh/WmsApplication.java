@@ -2,6 +2,7 @@ package com.example.hhh;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  *
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * PutMapping是和put请求组合，put是修改方法，可以用postMapping代替，用的较少
  * DeleteMapping是和delete方法组合，可以用get方法代替，用的较少
  */
+@EnableTransactionManagement
 @SpringBootApplication
 public class WmsApplication {
     //启动springboot程序 启动spring容器 启动tomcat
