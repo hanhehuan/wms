@@ -5,6 +5,8 @@ import com.example.hhh.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by admin on 2019/4/20.
  */
@@ -43,5 +45,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public int updateByPrimaryKey(User record) {
         return userMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<User> selectAllUser() {
+        return null;
     }
 }
