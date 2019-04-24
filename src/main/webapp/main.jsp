@@ -5,14 +5,12 @@
 <html>
 <head>
     <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
-    <title>welcome</title>
+    <title>进销存管理系统</title>
 
 </head>
 <body>
 
 ${msg}
-
-<a href="toLogin">跳转到登录页面</a>
 
 </body>
 

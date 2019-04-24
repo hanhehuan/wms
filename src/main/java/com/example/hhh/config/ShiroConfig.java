@@ -35,6 +35,7 @@ public class ShiroConfig {
         Map<String,String> filterMap = new LinkedHashMap<String,String>();
         filterMap.put("/add","authc");
         filterMap.put("/update","authc");
+        filterMap.put("/*","authc");
         //修改跳转的页面
         shiroFilterFactoryBean.setLoginUrl("/toLogin");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
