@@ -33,8 +33,9 @@ public class ShiroConfig {
          * role：该资源必须得到角色权限才可访问
          */
         Map<String,String> filterMap = new LinkedHashMap<String,String>();
-        filterMap.put("/add","authc");
-        filterMap.put("/update","authc");
+
+        filterMap.put("/toLogin","anon");
+        filterMap.put("/index","authc");
         filterMap.put("/*","authc");
         //修改跳转的页面
         shiroFilterFactoryBean.setLoginUrl("/toLogin");

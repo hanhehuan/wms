@@ -3,16 +3,20 @@ import com.example.hhh.dao.UserMapper;
 import com.example.hhh.model.User;
 import com.example.hhh.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by admin on 2019/4/20.
  */
+@Service("userService")
 public class UserServiceImpl implements UserService{
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Transactional
@@ -46,9 +50,9 @@ public class UserServiceImpl implements UserService{
     public int updateByPrimaryKey(User record) {
         return userMapper.updateByPrimaryKey(record);
     }
-
+    @Transactional
     @Override
     public List<User> selectAllUser() {
-        return null;
+        return userMapper.selectAllUser();
     }
 }
