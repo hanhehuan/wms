@@ -16,7 +16,7 @@ import java.util.List;
 @Service("userService")
 public class UserServiceImpl implements UserService{
 
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
     @Transactional

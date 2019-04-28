@@ -36,6 +36,7 @@ public class ShiroConfig {
 
         filterMap.put("/toLogin","anon");
         filterMap.put("/index","authc");
+        filterMap.put("/allUser","anon");
         filterMap.put("/*","authc");
         //修改跳转的页面
         shiroFilterFactoryBean.setLoginUrl("/toLogin");

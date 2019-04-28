@@ -2,8 +2,10 @@ package com.example.hhh;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -14,9 +16,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * PutMapping是和put请求组合，put是修改方法，可以用postMapping代替，用的较少
  * DeleteMapping是和delete方法组合，可以用get方法代替，用的较少
  */
-@MapperScan(value = "com.example.hhh.dao")
+@Configuration
 @EnableTransactionManagement
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
+@MapperScan(basePackages = "com.example.hhh.dao")
 public class WmsApplication {
     //启动springboot程序 启动spring容器 启动tomcat
     public static void main(String[] args) {
